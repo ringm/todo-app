@@ -71,8 +71,6 @@ export default function Todo(props) {
   const saveBtn = useRef();
   const editBtn = useRef();
 
-  const isComplete = todo.done ? 'done' : '';
-
   function handleChange() {
     handleCompletedTask(todo.id);
     if(todoText.current.classList.contains('done')) {
@@ -118,8 +116,7 @@ export default function Todo(props) {
       <div className="todo__text-container">
         <p
           ref={todoText}
-          className="todo__text"
-          className={isComplete}
+          className={todo.done ? 'todo__text done' : 'todo__text'} 
         >{todo.text}</p>
         <input 
           ref={todoInput}

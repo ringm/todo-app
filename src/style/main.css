@@ -1,0 +1,38 @@
+@import-normalize;
+@import 'layout.css';
+@import 'header.css';
+@import 'addTodo.css';
+@import 'todoList.css';
+@import 'todo.css';
+
+:root {
+  --main-bg-color: #fafafa;
+  --todo-bg-color:#fff;
+  --font-color: #494C6B;
+  --font-sec-color: #9495A5;
+  --font-thrd-color: #D1D2DA;
+  --line-color: #E3E4F1;
+  --color-accent: #3A7CFD;
+  --banner-img: url('../img/mountain.png');
+}
+
+*, 
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Josefin Sans';
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+

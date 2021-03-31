@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  width: min(90%, 540px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aux-text {
+  font-size: 18px;
+  color: #9495A5;
+}

@@ -1,0 +1,110 @@
+.todo__checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  background-color: var(--todo-bg-color);
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: solid 2px transparent;
+  background-clip: padding-box;
+}
+
+.todo__checkbox-label::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: -2px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background-image: url(../img/check-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.todo__checkbox {
+  display: none;
+}
+
+.todo__checkbox:checked~.todo__checkbox-label {
+  background: transparent;
+}
+
+.todo__checkbox:checked~.todo__checkbox-label::before {
+  background: linear-gradient(120deg, rgba(85,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.todo__checkbox:checked~.todo__checkbox-label::after {
+  opacity: 100;
+}
+
+.done {
+  opacity: 30%;
+  text-decoration: line-through;
+}
+
+.todo__text-container {
+  width: 100%;
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+.todo__text-edit {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.todo__text-edit:focus {
+  outline: none;
+  color: var(--color-accent);
+  width: 100%;
+}
+
+.todo__btns-container {
+  display: flex;
+}
+
+.todo__btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--font-sec-color);
+}
+
+.todo__btn:focus {
+  outline: none;
+}
+
+.todo__btn-icon {
+  width: 14px;
+  height: 14px;
+  fill: var(--font-sec-color);
+  transition: all .3s;
+}
+
+.todo__btn-icon:hover {
+  fill: var(--color-accent);
+}
+
+.todo__btn {
+  margin-left: 1.5rem;
+}
+
+.todo__edit-btn,
+.todo__delete-btn,
+.todo__save-btn {
+  opacity: 0;
+}
+
+.todo__move-btn {
+  cursor: grab;
+}

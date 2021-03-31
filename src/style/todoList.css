@@ -1,0 +1,19 @@
+.todo-list {
+  list-style: none;
+}
+
+.todo-list__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: var(--font-sec-color);
+}
+
+.footer__btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.filter-btns__container button:nth-child(even) {
+  margin: 0 .75rem;
+}

@@ -1,0 +1,19 @@
+.add-todo__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-family: 'Josefin Sans';
+  caret-color: var(--color-accent);
+  color: var(--font-sec-color);
+  font-size: 18px;
+}
+
+.add-todo__input:focus {
+  outline: none;
+}
+
+.add-todo__button {
+  all: unset;
+  cursor: pointer;
+  color: var(--font-sec-color);
+}
